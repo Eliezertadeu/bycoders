@@ -32,7 +32,6 @@ public class OwnerServiceImpl implements IOwnerService {
         return ownerRepository.findAll();
     }
 
-
     @Autowired
     public void setOwnerRepository(IOwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
