@@ -21,3 +21,49 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+
+#Angular
+# compiled output
+by-corders-finance/dist
+by-corders-finance/tmp
+by-corders-finance/out-tsc
+# Only exists if Bazel was run
+by-corders-finance/bazel-out
+
+# dependencies 
+by-corders-finance/node_modules
+
+# profiling files
+by-corders-finance/chrome-profiler-events*.json
+
+# IDEs and editors
+by-corders-finance/.idea
+by-corders-finance/.project
+by-corders-finance/.classpath
+by-corders-finance/.c9/
+by-corders-finance/launch
+by-corders-finance/.settings/
+by-corders-finance/*.sublime-workspace
+
+# IDE - VSCode
+by-corders-finance/.vscode/*
+by-corders-finance/!.vscode/settings.json
+by-corders-finance/!.vscode/tasks.json
+by-corders-finance/!.vscode/launch.json
+by-corders-finance/!.vscode/extensions.json
+by-corders-finance/.history/*
+
+# misc
+by-corders-finance/.sass-cache
+by-corders-finance/connect.lock
+by-corders-finance/coverage
+by-corders-finance/libpeerconnection.log
+by-corders-finance/npm-debug.log
+by-corders-finance/yarn-error.log
+by-corders-finance/testem.log
+by-corders-finance/typings
+
+# System Files
+by-corders-finance/.DS_Store
+by-corders-finance/Thumbs.db
