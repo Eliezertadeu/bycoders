@@ -1,5 +1,6 @@
 package com.bycorders.finance.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ public class Transaction implements Serializable {
     @Column(name = "TR_ID")
     private Long id;
 
+    @JsonFormat(pattern = "dd/MM/yyyy", timezone ="UTC-3")
     @Column(name = "TR_DATE")
     private Date date;
 

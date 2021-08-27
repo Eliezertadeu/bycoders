@@ -6,10 +6,7 @@ import org.springframework.http.ResponseEntity;
 import com.bycorders.finance.entity.Transaction;
 import com.bycorders.finance.entity.TransactionStore;
 import com.bycorders.finance.service.ITransactionService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.bycorders.finance.service.ITransactionStoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -38,7 +35,7 @@ public class TransactionsResource {
         return transaction.map(value -> ResponseEntity.ok().body(value)).orElseGet(() -> ResponseEntity.noContent().build());
     }
 
-    @GetMapping("/transactions-by-owner")
+    @GetMapping("/transactions-by-store")
     @ApiOperation(value = "Get all transactions grouped by store")
     public ResponseEntity<List<TransactionStore>> getTransactionsGroupedByStore() {
         return ResponseEntity.ok().body(storeService.findAll());
