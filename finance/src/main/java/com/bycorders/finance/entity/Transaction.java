@@ -35,8 +35,9 @@ public class Transaction implements Serializable {
     @Column(name = "TR_CREDIT_CARD")
     private String creditCard;
 
+    @JsonFormat(pattern = "HH:mm:ss", timezone ="UTC-3")
     @Column(name = "TR_HOUR")
-    private String hour;
+    private Date hour;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER)
@@ -90,11 +91,11 @@ public class Transaction implements Serializable {
         this.creditCard = creditCard;
     }
 
-    public String getHour() {
+    public Date getHour() {
         return hour;
     }
 
-    public void setHour(String hour) {
+    public void setHour(Date hour) {
         this.hour = hour;
     }
 

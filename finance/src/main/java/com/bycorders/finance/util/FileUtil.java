@@ -42,8 +42,8 @@ public class FileUtil {
         return transaction.substring(CREDIT_CARD[0], CREDIT_CARD[1]).trim();
     }
 
-    public static String getTransactionHour(String transaction) {
-        return transaction.substring(HOUR[0], HOUR[1]).trim();
+    public static Date getTransactionHour(String transaction) throws ParseException {
+        return new SimpleDateFormat("HHmmss").parse(transaction.substring(HOUR[0], HOUR[1]));
     }
 
     public static String getTransactionStoreOwner(String transaction) {
