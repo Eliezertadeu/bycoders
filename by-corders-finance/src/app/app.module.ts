@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { TransactionsModule } from './transactions/transactions.module';
+import { TransactionService } from './transactions/services/transaction.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    TransactionsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [TransactionService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

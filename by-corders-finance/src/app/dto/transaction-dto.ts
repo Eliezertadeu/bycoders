@@ -4,7 +4,8 @@ export interface TransactionDTO {
     id: Number,
     date: Date,
     cpf: String,
-    creaditCard: String,
+    creditCard: String,
     hour: String,
+    value: BigInteger,
     type: TransactionTypeDTO
 }

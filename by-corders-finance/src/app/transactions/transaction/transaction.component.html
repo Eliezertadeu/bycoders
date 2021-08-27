@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="info">
+        <button (click)="changeView(0)">Todas transações</button>
+        <button (click)="changeView(1)">Carregar CNAB</button>
+        <button (click)="changeView(2)">Transações por loja</button>
+    </div>
+</div>
+
+<div class="file">
+    <div class="store">
+        <app-base-table [transactions]="transactions" *ngIf="view == 0"></app-base-table>
+    </div>
+</div>
+
+<div class="file" *ngIf="view == 1">
+    <h1>Carregar arquivo CNAB</h1>
+    <input type="file" (change)="inputFileChange($event)" accept=".txt" />
+</div>
+
+<div class="file" *ngIf="view == 2">
+    <div *ngFor="let store of transactionsByStore" class="store">
+        <ul>
+            <li><span>Loja:</span> {{store.storeName}}</li>
+            <li><span>Dono:</span> {{store.owner.name}}</li>
+            <li><span>Entradas:</span> {{store.inputs}}</li>
+            <li><span>Saídas:</span> {{store.outputs}}</li>
+            <li><span>Total:</span> R$ {{store.total}}</li>
+        </ul>
+        <app-base-table [transactions]="store.transactions"></app-base-table>
+    </div>
+</div>

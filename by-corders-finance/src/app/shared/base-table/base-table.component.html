@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Data</th>
+            <th>CPF</th>
+            <th>Cartão</th>
+            <th>Valor</th>
+            <th>Hora</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let transaction of transactions">
+            <td>{{transaction.id}}</td>
+            <td>{{transaction.date}}</td>
+            <td>{{transaction.cpf}}</td>
+            <td>{{transaction.creditCard}}</td>
+            <td>R$ {{transaction.value}}</td>
+            <td>{{transaction.hour}}</td>
+            <td>{{transaction.type.description}}</td>
+        </tr>
+    </tbody>
+</table>
