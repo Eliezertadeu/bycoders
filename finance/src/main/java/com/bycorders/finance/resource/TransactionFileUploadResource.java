@@ -22,16 +22,16 @@ public class TransactionFileUploadResource {
     @PostMapping("/transactions-file-upload")
     @ApiOperation(value = "Save transactions of file")
     public ResponseEntity<Void> fileUpload(@RequestParam MultipartFile file) throws Exception {
-        if (isMediaTypeSupported(file)) {
+        if (isNotMediaTypeSupported(file)) {
             throw new HttpMediaTypeNotSupportedException("Seu arquivo está fora dos padrões da CNAB");
         }
         transactionService.saveTransactions(new TransactionFactoryImpl(), file);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    private boolean isMediaTypeSupported(MultipartFile file) {
+    private boolean isNotMediaTypeSupported(MultipartFile file) {
         if (file != null && file.getContentType() != null) {
-            return file.getContentType().equals(MediaType.TEXT_PLAIN.getType());
+            return !file.getContentType().equals(MediaType.TEXT_PLAIN_VALUE);
         }
         return false;
     }
