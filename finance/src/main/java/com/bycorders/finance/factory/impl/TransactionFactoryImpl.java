@@ -10,6 +10,7 @@ import org.reflections.Store;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -57,7 +58,7 @@ public class TransactionFactoryImpl implements ITranslateStringToFile {
             transaction.setCpf(FileUtil.getTransactionCpf(transact));
             transaction.setHour(FileUtil.getTransactionHour(transact));
             transaction.setDate(FileUtil.getTransactionDate(transact));
-            transaction.setValue(FileUtil.getTransactionValue(transact));
+            transaction.setValue(FileUtil.getTransactionValue(transact).divide(BigDecimal.valueOf(100)));
             transaction.setCreditCard(FileUtil.getTransactionCreditCard(transact));
 
             transaction.setTransactionStore(stores.stream()
