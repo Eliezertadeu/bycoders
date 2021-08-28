@@ -25,45 +25,45 @@ hs_err_pid*
 
 #Angular
 # compiled output
-by-corders-finance/dist
-by-corders-finance/tmp
-by-corders-finance/out-tsc
+by-coders-finance/dist
+by-coders-finance/tmp
+by-coders-finance/out-tsc
 # Only exists if Bazel was run
-by-corders-finance/bazel-out
+by-coders-finance/bazel-out
 
 # dependencies 
-by-corders-finance/node_modules
+by-coders-finance/node_modules
 
 # profiling files
-by-corders-finance/chrome-profiler-events*.json
+by-coders-finance/chrome-profiler-events*.json
 
 # IDEs and editors
-by-corders-finance/.idea
-by-corders-finance/.project
-by-corders-finance/.classpath
-by-corders-finance/.c9/
-by-corders-finance/launch
-by-corders-finance/.settings/
-by-corders-finance/*.sublime-workspace
+by-coders-finance/.idea
+by-coders-finance/.project
+by-coders-finance/.classpath
+by-coders-finance/.c9/
+by-coders-finance/launch
+by-coders-finance/.settings/
+by-coders-finance/*.sublime-workspace
 
 # IDE - VSCode
-by-corders-finance/.vscode/*
-by-corders-finance/!.vscode/settings.json
-by-corders-finance/!.vscode/tasks.json
-by-corders-finance/!.vscode/launch.json
-by-corders-finance/!.vscode/extensions.json
-by-corders-finance/.history/*
+by-coders-finance/.vscode/*
+by-coders-finance/!.vscode/settings.json
+by-coders-finance/!.vscode/tasks.json
+by-coders-finance/!.vscode/launch.json
+by-coders-finance/!.vscode/extensions.json
+by-coders-finance/.history/*
 
 # misc
-by-corders-finance/.sass-cache
-by-corders-finance/connect.lock
-by-corders-finance/coverage
-by-corders-finance/libpeerconnection.log
-by-corders-finance/npm-debug.log
-by-corders-finance/yarn-error.log
-by-corders-finance/testem.log
-by-corders-finance/typings
+by-coders-finance/.sass-cache
+by-coders-finance/connect.lock
+by-coders-finance/coverage
+by-coders-finance/libpeerconnection.log
+by-coders-finance/npm-debug.log
+by-coders-finance/yarn-error.log
+by-coders-finance/testem.log
+by-coders-finance/typings
 
 # System Files
-by-corders-finance/.DS_Store
-by-corders-finance/Thumbs.db
+by-coders-finance/.DS_Store
+by-coders-finance/Thumbs.db

@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "by-corders-finance": {
+    "by-coders-finance": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/by-corders-finance",
+            "outputPath": "dist/by-coders-finance",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "by-corders-finance:build:production"
+              "browserTarget": "by-coders-finance:build:production"
             },
             "development": {
-              "browserTarget": "by-corders-finance:build:development"
+              "browserTarget": "by-coders-finance:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "by-corders-finance:build"
+            "browserTarget": "by-coders-finance:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "by-corders-finance"
+  "defaultProject": "by-coders-finance"
 }

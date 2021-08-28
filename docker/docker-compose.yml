@@ -1,8 +1,16 @@
 version: '3.1'
 
 services:
-  postgres:
-    container_name: postgres-13
+  finance-api-compose:
+    image: eli/finance-api:0.0.1
+    ports:
+      - 18080:8080
+    networks: 
+      - finance-api
+    depends_on: 
+      - postgres-compose
+  
+  postgres-compose:
     image: postgres:13
     restart: always
     environment:
@@ -14,4 +22,12 @@ services:
     volumes:
       - ./db:/docker-entrypoint-initdb.d/
     ports:
-      - 5432:5432
+      - 15432:5423
+    networks: 
+      - finance-api
+
+networks:
+  finance-api:
+    driver: bridge
+
+
