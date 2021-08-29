@@ -2,6 +2,7 @@ package com.bycorders.finance.resource;
 
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import com.bycorders.finance.entity.Transaction;
 import com.bycorders.finance.entity.TransactionStore;
@@ -21,9 +22,13 @@ public class TransactionsResource {
 
     private ITransactionStoreService storeService;
 
+    @Value("${cors.origin-url}")
+    private String origim;
+
     @GetMapping("/transactions")
     @ApiOperation(value = "Get all transactions saved")
     public ResponseEntity<List<Transaction>> getAllTransactions() {
+        System.out.println(origim);
         return ResponseEntity.ok().body(transactionService.getTransactions());
     }
 

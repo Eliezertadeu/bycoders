@@ -4,7 +4,7 @@ services:
   finance-api-compose:
     image: eli/finance-api:0.0.1
     ports:
-      - 18080:8080
+      - 18080:8181
     networks: 
       - finance-api
     depends_on: 
@@ -26,6 +26,10 @@ services:
     networks: 
       - finance-api
 
+  finance-ui-compose:
+    image: eli/finance-ui:0.0.1
+    ports:
+      - 14200:80
 networks:
   finance-api:
     driver: bridge
