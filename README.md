@@ -38,6 +38,7 @@ Clone project in your machine and enter the project folder
 ```
 #### 2º Build back-end
 ```sh 
+    cd ./finance
     mvn clean
     mvn install -Dmaven.test.skip=true
     docker build -t eli/finance-api:0.0.1 .
