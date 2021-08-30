@@ -30,7 +30,7 @@ Clone project in your machine and enter the project folder
 #### 1º Build front-end
 ```sh
     npm install -g @angular/cli
-    cd ./by-corders-finance
+    cd ./by-coders-finance
     npm i
     ng build
     docker build -t eli/finance-ui:0.0.1 .
