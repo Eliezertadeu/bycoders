@@ -41,7 +41,7 @@ export class TransactionComponent implements OnInit {
       formData.append('file', file);
 
       this.transactionService.postUploadTransactionFile(formData)
-      this.changeView(1);
+      this.changeView(2);
     }
   }
 

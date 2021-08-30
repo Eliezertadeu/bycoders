@@ -4,9 +4,9 @@ package com.bycorders.finance.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Table(name = "TB_TRANSACTION_STORE")
@@ -33,7 +33,7 @@ public class TransactionStore implements Serializable {
     private Owner owner;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "transactionStore")
-    private Set<Transaction> transactions = new HashSet<>();
+    private List<Transaction> transactions = new ArrayList<>();
 
     public BigDecimal getTotal() {
         return transactions.stream().map(Transaction::getValue).reduce(BigDecimal.ZERO, BigDecimal::add);
@@ -77,7 +77,7 @@ public class TransactionStore implements Serializable {
         this.owner = owner;
     }
 
-    public Set<Transaction> getTransactions() {
+    public List<Transaction> getTransactions() {
         return transactions;
     }
 
